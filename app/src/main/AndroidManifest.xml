@@ -13,13 +13,17 @@
         android:theme="@style/Theme.World_Cup_app"
         tools:targetApi="31">
         <activity
-            android:name=".simpleListView.customListView.CustomList"
+            android:name=".simpleListView.ReclyeVieww.RecyleeView"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
+        <activity
+            android:name=".simpleListView.customListView.CustomList"
+            android:exported="true">
+        </activity>
     </application>
+
 </manifest>

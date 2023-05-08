@@ -1,4 +1,4 @@
-package com.example.world_cup_app.simpleListView;
+package com.example.world_cup_app.simpleListView.oops;
 
 public class OppsClass {
 
