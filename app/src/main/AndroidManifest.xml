@@ -13,7 +13,7 @@
         android:theme="@style/Theme.World_Cup_app"
         tools:targetApi="31">
         <activity
-            android:name=".simpleListView.ReclyeVieww.RecyleeView"
+            android:name=".simpleListView.NavigationDrawer.NvigationActivity"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -21,9 +21,21 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".simpleListView.customListView.CustomList"
+            android:name=".simpleListView.TabLayout.MyTabLayoutActivity"
             android:exported="true">
         </activity>
+        <activity
+            android:name=".simpleListView.viewPager.ViewPager"
+            android:exported="false"></activity>
+        <activity
+            android:name=".simpleListView.CarviewGame.CardView"
+            android:exported="false" />
+        <activity
+            android:name=".simpleListView.ReclyeVieww.RecyleeView"
+            android:exported="true" />
+        <activity
+            android:name=".simpleListView.customListView.CustomList"
+            android:exported="true" />
     </application>
 
 </manifest>
