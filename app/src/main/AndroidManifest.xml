@@ -13,20 +13,30 @@
         android:theme="@style/Theme.World_Cup_app"
         tools:targetApi="31">
         <activity
-            android:name=".simpleListView.NavigationDrawer.NvigationActivity"
-            android:exported="true" >
+            android:name=".simpleListView.GridLayoyt.GriddActivity"
+            android:exported="true"
+            android:label="@string/title_activity_grid"
+            android:theme="@style/Theme.World_Cup_app" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
-            android:name=".simpleListView.TabLayout.MyTabLayoutActivity"
+            android:name=".simpleListView.BottomNavigation.BottomActivity"
             android:exported="true">
+
         </activity>
         <activity
+            android:name=".simpleListView.NavigationDrawer.NvigationActivity"
+            android:exported="true"></activity>
+        <activity
+            android:name=".simpleListView.TabLayout.MyTabLayoutActivity"
+            android:exported="true"></activity>
+        <activity
             android:name=".simpleListView.viewPager.ViewPager"
-            android:exported="false"></activity>
+            android:exported="false" />
         <activity
             android:name=".simpleListView.CarviewGame.CardView"
             android:exported="false" />
