@@ -1,12 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:orientation="vertical"
     android:layout_height="match_parent"
     tools:context=".simpleListView.GridLayoyt.GriddActivity">
 
+<GridView
+    android:layout_width="0dp"
+    android:id="@+id/grid_View"
+    android:horizontalSpacing="6dp"
+    android:verticalSpacing="6dp"
+    android:numColumns="2"
+    android:layout_height="0dp">
+</GridView>
 
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
