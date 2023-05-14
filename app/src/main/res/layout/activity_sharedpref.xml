@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".simpleListView.SharedPref.SharedprefActivity">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_marginTop="190dp"
+        android:id="@+id/editText"
+        android:layout_height="wrap_content">
+    </EditText>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:id="@+id/textview"
+        android:textSize="32sp"
+        android:layout_marginBottom="68dp"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:id="@+id/button"
+        android:text="ClickMe!"
+        android:layout_gravity="center"
+        android:textSize="32dp"
+        android:backgroundTint="#0D0E0E"
+        android:textColor="#D50F0F"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>
