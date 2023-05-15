@@ -1,6 +1,9 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
     <style name="Base.Theme.World_Cup_app" parent="Theme.Material3.DayNight.NoActionBar">
+
+<!--        <style name="AppTheme.AppBarOverlay" parent="Theme.Material3.DayNight.NoActionBar"/>-->
+<!--        <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>-->
         <!-- Customize your dark theme here. -->
         <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
     </style>
