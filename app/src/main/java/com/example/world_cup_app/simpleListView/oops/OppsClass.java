@@ -142,8 +142,7 @@ public class OppsClass {
           //Example
         //step1
 //        abstract class Animal{
-//            public abstract void animalSound();  //when for all the property sound propery is diff diff so used abstract
-//            public void sleep(){                 //whn all the property is same for all the animal used public
+//                          //whn all the property is same for all the animal used public
 //                System.out.println("zzzz");
 //            }
 //        }

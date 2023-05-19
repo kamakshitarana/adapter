@@ -50,7 +50,6 @@ public class RecyleeView extends AppCompatActivity implements ItemClickListener{
         myAdapter =new MyAdapter(myListData);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-
         recyclerView.setAdapter(myAdapter);
 
         //handling the click events here
