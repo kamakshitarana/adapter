@@ -13,7 +13,7 @@
         android:theme="@style/Theme.World_Cup_app"
         tools:targetApi="31">
         <activity
-            android:name=".simpleListView.Androidjatpack.JetcpackActivity"
+            android:name=".simpleListView.JetpackBinding.DataBindingActivity"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -21,13 +21,18 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".simpleListView.SqlLite.SqlLiteActivity"
+            android:name=".simpleListView.RoomDb.RoomDbActivity"
             android:exported="true">
-
         </activity>
         <activity
-            android:name=".simpleListView.SharedPref.SharedprefActivity"
+            android:name=".simpleListView.Androidjatpack.JetcpackActivity"
             android:exported="true"></activity>
+        <activity
+            android:name=".simpleListView.SqlLite.SqlLiteActivity"
+            android:exported="true" />
+        <activity
+            android:name=".simpleListView.SharedPref.SharedprefActivity"
+            android:exported="true" />
         <activity
             android:name=".simpleListView.GridLayoyt.GriddActivity"
             android:exported="true" />
