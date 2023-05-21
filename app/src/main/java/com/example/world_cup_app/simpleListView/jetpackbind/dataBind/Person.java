@@ -1,4 +1,4 @@
-package com.example.world_cup_app.simpleListView.jetpackbind;
+package com.example.world_cup_app.simpleListView.jetpackbind.dataBind;
 
 public class Person {
     private String name;
@@ -13,15 +13,7 @@ public class Person {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
     public String getEmail() {
         return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
     }
 }

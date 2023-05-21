@@ -3,7 +3,7 @@
     <data>
         <variable
             name="person"
-            type="com.example.world_cup_app.simpleListView.jetpackbind.Person" />
+            type="com.example.world_cup_app.simpleListView.jetpackbind.dataBind.Person" />
     </data>
 
     <LinearLayout
