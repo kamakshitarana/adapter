@@ -8,10 +8,15 @@ import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.room.Room;
+import androidx.room.RoomDatabase;
+import androidx.sqlite.db.SupportSQLiteDatabase;
 
 import android.content.DialogInterface;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Looper;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -24,6 +29,8 @@ import com.example.world_cup_app.R;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 public class RoomDbActivity extends AppCompatActivity {
 
@@ -49,16 +56,47 @@ public class RoomDbActivity extends AppCompatActivity {
         // RecyclerVIew
         recyclerView = findViewById(R.id.recycler_view_contacts);
 
+        //callBacks
+        RoomDatabase.Callback myCallBack =new RoomDatabase.Callback() {
+            @Override
+            public void onCreate(@NonNull SupportSQLiteDatabase db) {
+                //this method will execute when database has been created
+                super.onCreate(db);
+                //these are 4 contacts already created in the app when installed (Built-in contact)
+
+                CreateContact("KamakshiTarana","Kamakshitarana9058@gmail.com");
+                CreateContact("RiyaTarana","riyatarana9058@gmail.com");
+                CreateContact("LaviTarana","lavitarana9058@gmail.com");
+                CreateContact("KukkeyTarana","Kukkeytarana9058@gmail.com");
+                Log.i("TAG","Database has been create");
+
+
+            }
+
+            @Override
+            public void onOpen(@NonNull SupportSQLiteDatabase db) {   //this method will execute when database has been open
+                super.onOpen(db);
+                Log.i("TAG","Database has been open");
+
+            }
+        };
+
+
+
+
         // Database
         contactsAppDatabase = Room.databaseBuilder(
                         getApplicationContext(),
                         ContactsAppDatabase.class,
                         "ContactDB")
-                .allowMainThreadQueries()
+                .addCallback(myCallBack)
                 .build();
 
         // Displaying All Contacts List
-        contactArrayList.addAll(contactsAppDatabase.getContactDAO().getContacts());
+//        contactArrayList.addAll(contactsAppDatabase.getContactDAO().getContacts());
+        DisplayAllContactInBackground();
+
+
 
         contactsAdapter = new ContactsAdapterrr(this, contactArrayList,RoomDbActivity.this);
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getApplicationContext());
@@ -177,6 +215,33 @@ public class RoomDbActivity extends AppCompatActivity {
             contactArrayList.add(0, contact);
             contactsAdapter.notifyDataSetChanged();
         }
+
+    }
+
+
+    //the below method will execute the when application have ANR error an application not responding
+
+    private void DisplayAllContactInBackground(){
+        ExecutorService executorService = Executors.newSingleThreadExecutor();
+        Handler handler =new Handler(Looper.getMainLooper());
+        executorService.execute(new Runnable() {
+            @Override
+            public void run() {
+                //Background Work
+                contactArrayList.addAll(contactsAppDatabase.getContactDAO().getContacts());
+
+                //Executed after the Background work had finished
+                handler.post(new Runnable() {
+                    @Override
+                    public void run() {
+                        //added now in reclyerview
+                        contactsAdapter.notifyDataSetChanged();
+
+                    }
+                });
+
+            }
+        });
 
     }
 
