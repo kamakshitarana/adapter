@@ -1,4 +1,4 @@
-package com.example.world_cup_app.simpleListView.JetpackBinding;
+package com.example.world_cup_app.simpleListView.jetpackbind;
 
 public class Person {
     private String name;

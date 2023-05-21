@@ -1,16 +1,14 @@
-package com.example.world_cup_app.simpleListView.JetpackBinding;
+package com.example.world_cup_app.simpleListView.jetpackbind;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
-
 import android.os.Bundle;
-
 import com.example.world_cup_app.R;
 import com.example.world_cup_app.databinding.ActivityDataBindingBinding;
 
-public class DataBindingActivity extends AppCompatActivity {
+public class PlayActivity extends AppCompatActivity {
 
-    private ActivityDataBindingBinding dataBinding;
+    private ActivityDataBindingBinding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,7 +16,7 @@ public class DataBindingActivity extends AppCompatActivity {
         setContentView(R.layout.activity_data_binding);
 
         Person person1 = new Person("Kamakshi", "lavitaranatarana@gmail.com");
-        dataBinding = DataBindingUtil.setContentView(this, R.layout.activity_data_binding);
-        dataBinding.setPerson(person1);
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_data_binding);
+        binding.setPerson(person1);
     }
 }
