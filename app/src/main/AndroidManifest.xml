@@ -13,25 +13,29 @@
         android:theme="@style/Theme.World_Cup_app"
         tools:targetApi="31">
         <activity
+            android:name=".simpleListView.mvvm.AddEditActivity"
+            android:exported="false" />
+        <activity
+            android:name=".simpleListView.mvvm.ModelViewwActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name=".simpleListView.jetpackbind.reclerBind.AddNeewContactActivity"
             android:exported="true" />
         <activity
             android:name=".simpleListView.jetpackbind.reclerBind.RecyleerViewwActivity"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-
+            android:exported="true"></activity>
         <activity
             android:name=".simpleListView.jetpackbind.contactManager.AddNewContactActivity"
             android:exported="false" />
         <activity
             android:name=".simpleListView.jetpackbind.contactManager.ContactManagerActivity"
-            android:exported="true">
-
-        </activity>
+            android:exported="true" />
         <activity
             android:name=".simpleListView.jetpackbind.twoWayBind.BinderActivity"
             android:exported="true" />

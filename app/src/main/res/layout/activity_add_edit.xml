@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable
+            name="clickHandlers"
+            type="com.example.world_cup_app.simpleListView.mvvm.AddEditActivity.AddEditActivityClickHandlers" />
+        <variable
+            name="course"
+            type="com.example.world_cup_app.simpleListView.mvvm.model.Course" />
+    </data>
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_marginRight="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_height="match_parent"
+        tools:context=".simpleListView.mvvm.AddEditActivity">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_marginTop="116dp"
+            android:hint="Course Name"
+            android:text="@{course.courseName}"
+            android:id="@+id/editText"
+            android:layout_height="wrap_content">
+        </EditText>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_marginTop="16dp"
+            android:text="@{course.unitPrice}"
+            android:hint="Course Price"
+            android:id="@+id/editTextprice"
+            android:layout_height="wrap_content">
+        </EditText>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:id="@+id/SubmitVtn"
+            android:text="Submit Button"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:onClick="@{clickHandlers::onSubmitButtonClick}"
+            android:layout_marginTop="30dp"
+            android:layout_height="wrap_content">
+        </Button>
+
+    </LinearLayout>
+</layout>
